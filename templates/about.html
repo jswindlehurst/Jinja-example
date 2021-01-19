@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}<title>About Me </title>{% endblock title %}
+
+{% block content %}
+    <h1>Hello, This is from about.html</h1>
+    <h2>Hello, Universe!!!! </h2>
+    {% if cities %}
+        <p>cities = {{cities}}</p>
+
+        <p>Accessing each element in the list </p>
+        <ul>
+        {% for city in cities %}
+            <li>{{cities}}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+    <p> list cities were not passed here</p>
+    {% endif %}
+{% endblock content %}
